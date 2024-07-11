@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: 2px solid black;
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #220452, #b69090);
+    padding: 10px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+nav {
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+nav ul a {
+    border: 1px solid black;
+    box-shadow: 0 0 5px 1px black;
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #3e8de7;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul a:hover {
+    color: black;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+    min-height: 100vh;
+    border-bottom: 1px solid black;
+    font-size: 18px;
+    line-height: 1.6;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#home {
+    background-image: url('pics/bg5.jpg');
+}
+
+#about {
+    background-image: url('pics/bg6.jpg');
+}
+
+#education {
+    background-image: url('pics/bg7.jpg');
+}
+
+#interests {
+    background-image: url('pics/bg8.jpg');
+}
+
+#creations {
+    display: flex;
+    flex-direction: column;
+    background-image: url('pics/bg13.jpg');
+}
+
+#skills {
+    background-image: url('pics/bg14.jpg');
+}
+
+#highlights{
+    display: flex;
+    flex-direction: column;
+    background-image: url('pics/bg15.jpg');
+
+}
+#contact {
+    background-image: url('pics/bg12.jpg');
+}
+
+.subsection {
+    margin: 10px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+}
+
+.subsection img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.education-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.education-table th,
+td {
+    padding: 5px;
+    margin: 0;
+    border: 2px solid black;
+}
+
+.education-image figure{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.interests-image {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.interests-image img {
+    height: 200px;
+    width: 300px;
+}
+
+.interests-content {
+    height: 60%;
+}
+
+.creations-container {
+    max-width: 90%;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.creations-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.skills-content {
+    font-size: larger;
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.highlights-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.highlights-content{
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+    width: 30%;
+    height: auto;
+}
+.highlights-content img{
+    width: auto;
+    height: auto;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-size: 5em;
+}
+
+@media (min-width: 600px) {
+    .profile-pic {
+        width: 75px;
+        height: 75px;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    .interests-image img,
+    .creations-container img {
+        width: 45%;
+        height: auto;
+    }
+}
+
+@media (min-width: 900px) {
+    header {
+        flex-direction: row;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    section {
+        flex-direction: row;
+    }
+
+    .subsection {
+        width: 45%;
+    }
+
+    .about-image img,
+    .education-image img {
+        width: 45%;
+    }
+}
